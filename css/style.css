@@ -1,16 +1,8 @@
 @font-face {
     font-family: 'Open Sans';
-    src: url('./fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
  font-weight: 100 900; /* supports all weights */
     font-style: normal
-}
-@font-face{
-    font-family: 'Fascinate';
-    src:url('./fonts/Fascinate/Fascinate-Regular.ttf') format('truetype');
-}
-@font-face{
-    font-family: 'Birthstone';
-    src:url('./fonts/Birthstone/Birthstone-Regular.ttf') format('truetype');
 }
 
 *{
@@ -95,7 +87,7 @@ background-color: rgba(195, 195, 186, 0.4);
 }
 .about-section{
     height: 600px;
-    widht: 100%;
+    width: 100%;
     padding-left: 3%;
     padding-top: 6%;
 }
