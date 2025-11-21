@@ -49,21 +49,35 @@ background-color: rgba(195, 195, 186, 0.4);
     color: rgb(100, 100, 100);
 }
 .nav-bar ul{
-    opacity: 0;
+    min-width: 150px;
     list-style: none;
-    font-size: 22px;
-     position: absolute;
-     right: 20px;
-    transition: opacity 0.8s ease;
-}
-.drop-down:hover + ul{
-    opacity: 1;
+    font-size: 23px;
     position: absolute;
     background-color: rgba(195, 195, 186, 0.4);
     backdrop-filter: blur(10px) ;
     margin-top: 10px;
     border-radius: 10px;
     padding: 10px;
+    right: 6%;
+    transition: opacity 0.5s ease;
+}
+.nav-bar ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.nav-bar ul li:hover{
+    color: rgb(100, 100, 100);
+}
+.drop-down{
+    cursor: pointer;
+     
+}
+.dropdown-menu{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
 }
 
 
