@@ -48,10 +48,25 @@ background-color: rgba(195, 195, 186, 0.4);
 .nav-bar a:hover{
     color: rgb(100, 100, 100);
 }
-
 .nav-bar ul{
-    display: none;
+    opacity: 0;
+    list-style: none;
+    font-size: 22px;
+     position: absolute;
+     right: 20px;
+    transition: opacity 0.8s ease;
 }
+.drop-down:hover + ul{
+    opacity: 1;
+    position: absolute;
+    background-color: rgba(195, 195, 186, 0.4);
+    backdrop-filter: blur(10px) ;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
 .name-h h1{
     font-family: 'Open Sans';
     font-size: 2.5rem;
@@ -142,8 +157,12 @@ background-color: rgba(195, 195, 186, 0.4);
 }
 .main-item{
     opacity: 1;
-    transition: opacity 0.8s ease, transform 1s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
      transform: scale(1);
+     cursor: pointer;
+}
+.main-item:hover{
+    transform: scale(1.05); 
 }
 footer{
     height: 150px;
