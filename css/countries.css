@@ -1,20 +1,17 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 20px;
-}
-
-h1, h2 {
+h1,
+h2 {
     font-weight: normal;
+    margin: 0;
+    margin-bottom: 1rem;
 }
 
 h1 {
-    padding-bottom: 12px;
+    display: inline-block;
+    padding-bottom: 4px;
     border-bottom: 1px solid;
+    padding-right: 5rem;
 }
 
-#inner {
-    width: 960px;
-    margin: 0px auto;
+p {
+    margin: 0;
 }
