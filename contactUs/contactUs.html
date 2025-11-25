@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+
+        <p class="contact-info">
+            Have a question or want to work together?<br>
+            Email us at <strong>daniilkolesnikov120@gmail.com</strong>
+        </p>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-links">
+            <p>Or contact us:</p>
+            <p>Email: daniilkolesnikov120@gmail.com</p>
+            <p>Phone: 0894141246</p>
+        </div>
+    </div>
+
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const data = {
+        name: document.querySelector("input[name='name']").value,
+        email: document.querySelector("input[name='email']").value,
+        subject: document.querySelector("input[name='subject']").value,
+        message: document.querySelector("textarea[name='message']").value
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycbzpSJ2pD9jkAnoqoCayxAjMS1BmxAWlLglX8ISWqQfiNo8OH5CRO9_17QzjTKLzwrihBg/exec", {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(res => {
+        alert("Message Sent! Thank you.");
+        document.getElementById("contactForm").reset();
+    })
+    .catch(err => {
+        alert("Error sending message.");
+        console.error(err);
+    });
+});
+    </script>
+
+</body>
+</html>
