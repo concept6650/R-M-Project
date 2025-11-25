@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--helps scale on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
+     <!-- link to css file -->
+    <link rel="stylesheet" href="styleAbout.css">
 </head>
 <body>
 
+    <!-- main title and text under it  -->
     <div class="container">
         <h1>Contact Us</h1>
 
@@ -16,14 +19,16 @@
             Email us at <strong>daniilkolesnikov120@gmail.com</strong>
         </p>
 
+       <!-- main part of the page including button at the bottom and user input sections -->
         <form id="contactForm">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="subject" placeholder="Subject">
+            <input type="text" name="subject" placeholder="Subject"> <!-- doesnt include required.... because its not-->
             <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
 
+        <!-- extra contact info section under the form -->
         <div class="social-links">
             <p>Or contact us:</p>
             <p>Email: daniilkolesnikov120@gmail.com</p>
@@ -31,6 +36,7 @@
         </div>
     </div>
 
+    <!-- script required for the subbmision to go to contactForm (the google sheet)-->
     <script>
 document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -42,14 +48,15 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         message: document.querySelector("textarea[name='message']").value
     };
 
-    fetch("https://script.google.com/macros/s/AKfycbzpSJ2pD9jkAnoqoCayxAjMS1BmxAWlLglX8ISWqQfiNo8OH5CRO9_17QzjTKLzwrihBg/exec", {
+    // tells it where the sheet is 
+    fetch("https://script.google.com/macros/s/AKfycbzpSJ2pD9jkAnoqoCayxAjMS1BmxAWlLglX8ISWqQfiNo8OH5CRO9_17QzjTKLzwrihBg/exec", { 
         method: "POST",
         body: JSON.stringify(data)
     })
     .then(res => res.json())
     .then(res => {
-        alert("Message Sent! Thank you.");
-        document.getElementById("contactForm").reset();
+        alert("Message Sent! Thank you."); // gives them assurance that it accually went somewhere
+        document.getElementById("contactForm").reset(); // clears the form for the next submission
     })
     .catch(err => {
         alert("Error sending message.");
