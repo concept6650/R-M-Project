@@ -2,78 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!--helps scale on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f5f5f5;
-      }
-
-      .container {
-        width: 80%;
-        max-width: 900px;
-        margin: 50px auto;
-        background: #fff;
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .contact-info {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      input,
-      textarea {
-        padding: 12px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-      }
-
-      button {
-        padding: 12px;
-        margin-top: 10px;
-        border: none;
-        background: #333;
-        color: #fff;
-        font-size: 18px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background: #555;
-      }
-
-      .social-links {
-        text-align: center;
-        margin-top: 30px;
-        font-size: 18px;
-        color: #333;
-      }
-
-      .social-links p {
-        margin: 5px 0;
-      }
-    </style>
+    <!-- link to css file -->
+    <link rel="stylesheet" href="./css/contact.css" />
   </head>
   <body>
+    <!-- main title and text under it  -->
     <div class="container">
       <h1>Contact Us</h1>
 
@@ -82,10 +18,12 @@
         Email us at <strong>daniilkolesnikov120@gmail.com</strong>
       </p>
 
+      <!-- main part of the page including button at the bottom and user input sections -->
       <form id="contactForm">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <input type="text" name="subject" placeholder="Subject" />
+        <!-- doesnt include required.... because its not-->
         <textarea
           name="message"
           rows="6"
@@ -95,6 +33,7 @@
         <button type="submit">Send Message</button>
       </form>
 
+      <!-- extra contact info section under the form -->
       <div class="social-links">
         <p>Or contact us:</p>
         <p>Email: daniilkolesnikov120@gmail.com</p>
@@ -102,6 +41,7 @@
       </div>
     </div>
 
+    <!-- script required for the subbmision to go to contactForm (the google sheet)-->
     <script>
       document
         .getElementById("contactForm")
@@ -115,6 +55,7 @@
             message: document.querySelector("textarea[name='message']").value,
           };
 
+          // tells it where the sheet is
           fetch(
             "https://script.google.com/macros/s/AKfycbzpSJ2pD9jkAnoqoCayxAjMS1BmxAWlLglX8ISWqQfiNo8OH5CRO9_17QzjTKLzwrihBg/exec",
             {
@@ -124,8 +65,8 @@
           )
             .then((res) => res.json())
             .then((res) => {
-              alert("Message Sent! Thank you.");
-              document.getElementById("contactForm").reset();
+              alert("Message Sent! Thank you."); // gives them assurance that it accually went somewhere
+              document.getElementById("contactForm").reset(); // clears the form for the next submission
             })
             .catch((err) => {
               alert("Error sending message.");
