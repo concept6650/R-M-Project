@@ -11,8 +11,11 @@
 </head>
 
 <body>
+	<!-- The Background image for the site -->
 	<div style="background-image: url(../img/france/background.webp); background-color: #60818e;"
 		class="background-div"></div>
+
+	<!-- The Header at the top of the site -->
 	<header>
 		<div class="name-h">
 			<h1>ROAM EU</h1>
@@ -32,19 +35,27 @@
 			<a href="../contact.html">Contact</a>
 		</div>
 	</header>
+
+	<!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
 	<div class="grid-div">
 		<div></div>
+
+		<!-- Left content column containing the main part of the text -->
 		<div class="main-div-outer">
 			<article class="main-div-inner">
+				<!-- The flag of the country as an SVG, take from Wikipedia -->
 				<svg class="flag" aria-label="Flag of France" xmlns="http://www.w3.org/2000/svg" width="15rem"
 					height="10rem">
 					<rect width="15rem" height="10rem" fill="#CE1126" />
 					<rect width="10rem" height="10rem" fill="#FFFFFF" />
 					<rect width="5rem" height="10rem" fill="#002654" />
 				</svg>
+				<!-- the National Anthem taken from Wikipedia -->
 				<audio aria-label="La Marseillaise, the National Anthem of France" controls>
 					<source src="../audio/La_Marseillaise.ogg"> Your browser does not support the audio element.
 				</audio>
+
+				<!-- Here begins the primary text content -->
 				<h1>Summary</h1>
 				<p>
 					France is one of the world's most visited countries, famous for its
@@ -56,6 +67,7 @@
 					spoken in tourist areas. The best time to visit is during
 					summer/autumn when the weather is pleasant with fewer crowds.
 				</p>
+				<!-- To break up the text a bit, we include a map of the country -->
 				<img src="../img/france/map.webp" style="background-color: #cad5ca;" width="600px" height="583px"
 					class="large-image" alt="Map of France">
 				<h1>Getting around</h1>
@@ -78,6 +90,8 @@
 				</p>
 			</article>
 		</div>
+
+		<!-- The right column of content containing the top 5 things to do -->
 		<div class="main-div-outer">
 			<article class="main-div-inner">
 				<h1>Top 5 Things to Do</h1>
@@ -109,8 +123,9 @@
 					</li>
 				</ol>
 			</article>
-			<div></div>
 		</div>
+
+		<div></div>
 	</div>
 </body>
 
