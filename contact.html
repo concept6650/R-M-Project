@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="./css/contact.css" />
     <link rel="stylesheet" href="../css/shared.css" />
   </head>
+  <!-- The Header at the top of the site -->
+	<header>
+		<div class="name-h">
+			<h1>ROAM EU</h1>
+		</div>
+		<div class="nav-bar">
+			<a href="../index.html">Home</a>
+			<a href="../index.html">About</a>
+			<a class="drop-down"
+				onclick="document.getElementById('country-list').classList.toggle('show')">Countries</a>
+			<ul id="country-list" class="dropdown-menu">
+				<li><a href="../countries/france.html">France</a></li>
+				<li><a href="../countries/italy.html">Italy</a></li>
+				<li><a href="../countries/spain.html">Spain</a></li>
+				<li><a href="../countries/portugal.html">Portugal</a></li>
+				<li><a href="../countries/germany.html">Germany</a></li>
+			</ul>
+			<a href="../contact.html">Contact</a>
+		</div>
+	</header>
   <body>
     <!-- main title and text under it  -->
     <div class="container">
