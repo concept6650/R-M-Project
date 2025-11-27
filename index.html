@@ -7,24 +7,24 @@
     <title>ROAMEU/Home</title>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="name-h">
         <h1>ROAM EU</h1>
       </div>
-      <div class="nav-bar">
+      <nav class="nav-bar">
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a class="drop-down">Countries</a>
         <ul class="dropdown-menu">
-          <li>France</li>
-          <li>Italy</li>
-          <li>Spain</li>
-          <li>Portugal</li>
-          <li>Germany</li>
+          <li><a href="./countries/france.html">FRANCE</a></li>
+            <li><a href="./countries/italy.html">ITALY</a></li>
+            <li><a href="./countries/spain.html">SPAIN</a></li>
+           <li><a href="./countries/portugal.html">PORTUGAL</a></li>
+            <li><a href="./countries/Germany.html"></a></li>
         </ul>
         <a href="contact.html">Contact</a>
-      </div>
-    </div>
+      </nav>
+    </header>
     <div class="top-section">
       <div class="intro-text">
         <h2>Welcome to ROAM EU</h2>
@@ -53,26 +53,33 @@
     <div class="countries-section">
       <h2>Choose Your Destination</h2>
       <div class="carousel">
-        <div class="carousel-item">
-          <img src="./SVGs/France 2.svg" alt="France" />
-          <h3>France</h3>
-        </div>
-        <div class="carousel-item">
-          <img src="./SVGs/Italy 2.svg" alt="Italy" />
-          <h3>Italy</h3>
-        </div>
-        <div class="carousel-item main-item">
-          <img src="./SVGs/spain 2.svg" alt="Spain" />
-          <h3>Spain</h3>
-        </div>
-        <div class="carousel-item">
-          <img src="./SVGs/Portugal 2.svg" alt="Portugal" />
-          <h3>Portugal</h3>
-        </div>
-        <div class="carousel-item">
-          <img src="./SVGs/germanSvg.svg" alt="Greece" />
-          <h3>Germany</h3>
-        </div>
+
+  <a href="countries/france.html" class="carousel-item">
+    <img src="./SVGs/France 2.svg" alt="France" />
+    <h3>France</h3>
+  </a>
+
+  <a href="countries/italy.html" class="carousel-item">
+    <img src="./SVGs/italy 2.svg" alt="Italy" />
+    <h3>Italy</h3>
+  </a>
+
+  <a href="countries/spain.html" class="carousel-item main-item">
+    <img src="./SVGs/spainSvg.svg" alt="Spain" />
+    <h3>Spain</h3>
+  </a>
+
+  <a href="countries/portugal.html" class="carousel-item">
+    <img src="./SVGs/portugalSvg.svg" alt="Portugal" />
+    <h3>Portugal</h3>
+  </a>
+
+  <a href="countries/Germany.html" class="carousel-item">
+    <img src="./SVGs/germanSvg.svg" alt="Germany" />
+    <h3>Germany</h3>
+  </a>
+
+</div>
       </div>
     </div>
     <footer>
@@ -86,5 +93,3 @@
     <script src="./js/script.js"></script>
   </body>
 </html>
-
-
