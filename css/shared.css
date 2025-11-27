@@ -36,7 +36,7 @@ header:hover {
 }
 
 .dropdown-menu {
-	opacity: 0;
+	display: none;
 }
 
 .nav-bar {
@@ -82,5 +82,5 @@ header:hover {
 }
 
 .show {
-	opacity: 1;
+	display: block;
 }

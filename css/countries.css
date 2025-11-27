@@ -58,6 +58,7 @@ body {
 }
 
 .flag {
+	max-width: 15rem;
 	float: left;
 	padding: 1rem;
 }
