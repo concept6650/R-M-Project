@@ -1,59 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Italy</title>
-    <script src="../js/keep-params.js"></script>
-    <link rel="stylesheet" href="../css/countries.css" />
-  </head>
-  <body>
-    <a href="../countries.html"><- back</a>
-    <hr />
-    <br />
-    <div id="inner">
-      <h1>Summary</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Top 5 Things to Do</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Getting around</h1>
-      <h2>Transport</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <h2>Safety</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-    </div>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Italy</title>
+	<script src="../js/keep-params.js"></script>
+	<link rel="stylesheet" href="../css/countries.css" />
+	<link rel="stylesheet" href="../css/shared.css" />
+</head>
+
+<body>
+	<!-- The Background image for the site -->
+	<div style="background-image: url(../img/italy/background.webp); background-color: #60818e;" class="background-div">
+	</div>
+
+	<!-- The Header at the top of the site -->
+	<header>
+		<div class="name-h">
+			<h1>ROAM EU</h1>
+		</div>
+		<div class="nav-bar">
+			<a href="../index.html">Home</a>
+			<a href="../index.html">About</a>
+			<a class="drop-down"
+				onclick="document.getElementById('country-list').classList.toggle('show')">Countries</a>
+			<ul id="country-list" class="dropdown-menu">
+				<li><a href="../countries/france.html">France</a></li>
+				<li><a href="../countries/italy.html">Italy</a></li>
+				<li><a href="../countries/spain.html">Spain</a></li>
+				<li><a href="../countries/portugal.html">Portugal</a></li>
+				<li><a href="../countries/germany.html">Germany</a></li>
+			</ul>
+			<a href="../contact.html">Contact</a>
+		</div>
+	</header>
+
+	<!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
+	<div class="grid-div">
+		<div></div>
+
+		<!-- Left content column containing the main part of the text -->
+		<div class="main-div-outer">
+			<article class="main-div-inner">
+				<!-- The flag of the country as an SVG, taken from Wikipedia -->
+				<img src="../SVGs/Flag_of_Italy.svg" class="flag" alt="Flag of Italy">
+				<!-- the National Anthem taken from Wikipedia -->
+				<audio aria-label="Canto degli Italiani - National Anthem of Italy" controls>
+					<source src="../audio/Canto_degli_Italiani_-_Marina_Militare_(strumentale).wav">
+					Your browser does not support the audio element.
+				</audio>
+
+				<!-- Here begins the primary text content -->
+				<h1>Summary</h1>
+				<p>
+					Italy is a country where history, art, and natural beauty come together in a way few places can
+					match. From the ancient ruins of Rome to the romantic canals of Venice, the Renaissance treasures of
+					Florence, and the sun-drenched coastlines of the Amalfi and Cinque Terre, Italy offers unforgettable
+					culture and scenery. The capital is Rome, and the primary language is Italian, though English is
+					widely spoken in major tourist destinations. The best time to visit is spring and autumn for
+					comfortable weather and lighter crowds.
+				</p>
+
+				<!-- To break up the text a bit, we include a map of the country -->
+				<img src="../img/italy/map.webp" style="background-color: #cad5ca;" width="600px" height="583px"
+					class="large-image" alt="Map of Spain">
+
+				<h1>Getting around</h1>
+				<h2>Transport</h2>
+				<p>
+					Italy’s rail network is extensive and convenient. High-speed trains like Frecciarossa and Italo
+					connect major cities quickly, while regional trains reach smaller towns and countryside areas. Urban
+					travel is easy with metro systems in Rome, Milan, and Naples, along with buses and trams. Renting a
+					car is helpful for rural regions such as Tuscany, Puglia, or the Dolomites, where public transport
+					is limited. Ferries connect coastal cities and islands like Sardinia, Sicily, and Capri.
+				</p>
+				<h2>Safety</h2>
+				<p>
+					Italy is generally safe, with most visits trouble-free. The main issue travelers encounter is petty
+					theft in busy cities—especially around major attractions, train stations, and public transit. Keep
+					valuables secure and be mindful in crowds. Central areas are typically safe at night, though some
+					neighborhoods around large train stations can feel rough after dark. Follow local guidance during
+					major holidays and events, which can draw large crowds.
+				</p>
+			</article>
+		</div>
+
+		<!-- The right column of content containing the top 5 things to do -->
+		<div class="main-div-outer">
+			<article class="main-div-inner">
+				<h1>Top 5 Things to Do</h1>
+				<ol>
+					<li>
+						<p class="list-text">Explore Rome's Ancient Monuments</p>
+						<img src="../img/italy/colosseum.webp" style="background-color: #e8f0e4;" class="list-image"
+							alt="Image of the Colosseum">
+					</li>
+					<li>
+						<p class="list-text">Discover Florence and the Renaissance</p>
+						<img src="../img/italy/florence.webp" style="background-color: #0272b5;" class="list-image"
+							alt="Image of Florence">
+					</li>
+					<li>
+						<p class="list-text">Sail the Canals of Venice</p>
+						<img src="../img/italy/venice.webp" style="background-color: #6c6479;" class="list-image"
+							alt="Image of Venice">
+					</li>
+					<li>
+						<p class="list-text">Hike the Italian Coastlines</p>
+						<img src="../img/italy/coastline.webp" style="background-color: #87937d;" class="list-image"
+							alt="Image of an italian coastline">
+					</li>
+					<li>
+						<p class="list-text">Explore the Italian Lakes and Alps</p>
+						<img src="../img/italy/alps.webp" style="background-color: #a3b133;" class="list-image"
+							alt="Image of the italian Alps">
+					</li>
+				</ol>
+			</article>
+		</div>
+
+		<div></div>
+	</div>
+</body>
+
 </html>
