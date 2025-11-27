@@ -19,19 +19,21 @@
       </p>
 
       <!-- main part of the page including button at the bottom and user input sections -->
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="subject" placeholder="Subject" />
-        <!-- doesnt include required.... because its not-->
-        <textarea
-          name="message"
-          rows="6"
-          placeholder="Your Message"
-          required
-        ></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+       <form id="contactForm">
+            <label for="name">Your Name</label>
+            <input id="name" type="text" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input id="email" type="email" name="email" required>
+
+            <label for="subject">Subject (optional)</label>
+            <input id="subject" type="text" name="subject">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
 
       <!-- extra contact info section under the form -->
       <div class="social-links">
