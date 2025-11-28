@@ -23,8 +23,8 @@
         <a href="#">Home</a>
         <!-- About section link -->
         <a href="#about">About</a>
-        <!-- Dropdown menu trigger for country selection -->
-        <a class="drop-down">Countries</a>
+        <!-- Dropdown menu trigger for country selection - Updated to be keyboard accessible -->
+        <button class="drop-down" aria-label="Toggle countries menu" aria-expanded="false">Countries</button>
         <!-- Dropdown menu containing list of European countries -->
         <ul class="dropdown-menu">
           <li><a href="./countries/france.html">FRANCE</a></li>
@@ -38,8 +38,10 @@
       </nav>
     </header>
 
-    <!-- Hero/Welcome section: Features the main welcome message and a featured image -->
-    <div class="top-section">
+    <!-- Main content area: Wraps all primary page content between header and footer -->
+    <main>
+      <!-- Hero/Welcome section: Features the main welcome message and a featured image -->
+      <section class="top-section">
       <!-- Welcome text content on the left side -->
       <div class="intro-text">
         <h2>Welcome to ROAM EU</h2>
@@ -47,10 +49,10 @@
       </div>
       <!-- Featured travel image on the right side -->
       <img src="img/top_section.webp" alt="Travel in Europe" />
-    </div>
+    </section>
 
     <!-- About Us section: Provides information about ROAM EU and our services -->
-    <div class="about-section" id="about">
+    <section class="about-section" id="about">
       <h2>About Us</h2>
       <p>
         Welcome to Roam EU! We are dedicated to helping travelers explore the
@@ -67,40 +69,54 @@
         nations unique. Discover the effortless way to explore Europe with Roam
         EU. Let us guide you on your next great adventure.
       </p>
-    </div>
+    </section>
+
+    <!-- YouTube video section: Features a promotional video about Europe travel -->
+    <section class="youtube-section">
+      <div class="video-container">
+        <iframe 
+          class="video-player"
+        src="https://www.youtube.com/embed/0xhzwDXfLds?si=_lU4qqxFTGGebSEK&amp;controls=0" 
+          title="Europe Travel Experience"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
     <!-- Destination showcase section: Displays all featured countries with images -->
-    <div class="countries-section">
+    <section class="countries-section">
       <h2>Choose Your Destination</h2>
       <!-- Container for country cards that displays them in a horizontal scrollable layout on desktop -->
       <div class="container">
         <!-- France destination card -->
-        <a class="item">
+        <a href="./countries/france.html" class="item">
           <img src="./img/premium_photo-1719430569503-338fc89eb21f.avif" alt="France" />
           <h3>France</h3>
         </a>
         <!-- Italy destination card -->
-        <a class="item">
+        <a href="./countries/italy.html" class="item">
           <img src="./img/spencer-davis-ckotRXopwRM-unsplash.jpg" alt="Italy" />
           <h3>Italy</h3>
         </a>
         <!-- Spain destination card -->
-        <a class="item">
+        <a href="./countries/spain.html" class="item">
           <img src="./img/robin-ulrich-Dnfl3fIjjtk-unsplash.jpg" alt="Spain" />
           <h3>Spain</h3>
         </a>
         <!-- Portugal destination card -->
-        <a class="item">
+        <a href="./countries/portugal.html" class="item">
           <img src="./img/ekaterina-boltaga-jqkGK3ofxi8-unsplash.jpg" alt="Portugal" />
           <h3>Portugal</h3>
         </a>
         <!-- Germany destination card -->
-        <a class="item">
-          <img src="./img/julia-solonina-5NnK3nJ44g8-unsplash.jpg" alt="Greece" />
+        <a href="./countries/Germany.html" class="item">
+          <img src="./img/julia-solonina-5NnK3nJ44g8-unsplash.jpg" alt="Germany" />
           <h3>Germany</h3>
         </a>
       </div>
-    </div>
+    </section>
+    </main>
 
     <!-- Footer section: Contains company information, links, and copyright notice -->
     <footer>
@@ -114,16 +130,18 @@
         <!-- Quick links section in footer: Important navigation links -->
         <div class="footer-section">
           <h3>Quick Links</h3>
-          <a href="#about">About</a>
-          <p></p>
-          <a href="contact.html">Contact Us</a>
+          <nav>
+            <a href="#about">About</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
         </div>
         <!-- Legal section in footer: Privacy and terms links -->
         <div class="footer-section">
           <h3>Legal</h3>
-          <a href="#privacy">Privacy Policy</a>
-          <p></p>
-          <a href="#terms">Terms of Service</a>
+          <nav>
+            <a href="./contact.html">Privacy Policy</a>
+            <a href="./contact.html">Terms of Service</a>
+          </nav>
         </div>
       </div>
       <!-- Copyright notice at the bottom of the footer -->

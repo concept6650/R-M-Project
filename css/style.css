@@ -1,4 +1,4 @@
-/* ============================================
+ /* ============================================
    CUSTOM FONTS & GLOBAL STYLES
    ============================================ */
 
@@ -10,6 +10,15 @@
     font-style: normal
 }
 
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+   a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+   }
+   
 /* Reset all default margins and padding to ensure consistent spacing across browsers */
 *{
     margin: 0;
@@ -63,6 +72,7 @@ background-color: rgba(195, 195, 186, 0.4);
     transition: color 0.3s ease;
 }
 
+
 /* Change link color on hover for visual feedback */
 .nav-bar a:hover{
     color: rgb(100, 100, 100);
@@ -95,11 +105,27 @@ background-color: rgba(195, 195, 186, 0.4);
     color: rgb(100, 100, 100);
 }
 
-/* Cursor pointer for dropdown trigger */
+/* Cursor pointer for dropdown trigger button - styled to match navigation links */
 .drop-down{
     cursor: pointer;
-     
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    font-size: 1.5rem;
+    font-family: 'Open Sans';
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0;
+    font-weight: normal;
 }
+
+/* Apply hover effect to dropdown button matching sibling links */
+.drop-down:hover{
+    color: rgb(100, 100, 100);
+}
+
+
 
 /* Dropdown menu hidden by default with opacity */
 .dropdown-menu{
@@ -243,6 +269,36 @@ background-color: rgba(195, 195, 186, 0.4);
 }
 
 /* ============================================
+   YOUTUBE VIDEO SECTION
+   ============================================ */
+
+/* YouTube section: Full width container with video centered */
+.youtube-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Video container: Holds the iframe with proper aspect ratio */
+.video-container {
+    width: 80%;
+    max-width: 1000px;
+    aspect-ratio: 16 / 9;
+}
+
+/* YouTube iframe: Responsive video player */
+.video-player {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
    FOOTER SECTION
    ============================================ */
 
@@ -345,6 +401,12 @@ footer .footer-bottom {
         font-size: 1.2rem;
     }
 
+    /* Reduce dropdown button font size to match sibling links on tablets */
+    .nav-bar .drop-down {
+        margin-left: 15px;
+        font-size: 1.2rem;
+    }
+
     /* Hero section changes to vertical layout on tablets */
     .top-section {
         height: 600px;
@@ -390,6 +452,16 @@ footer .footer-bottom {
     .about-section p {
         font-size: 1rem;
         width: 100%;
+    }
+
+    /* YouTube section adjusts for tablets */
+    .youtube-section {
+        padding: 50px 15px;
+    }
+
+    /* Video container width optimized for tablets */
+    .video-container {
+        width: 90%;
     }
 
     /* Countries section padding adjustment for tablets */
@@ -545,12 +617,23 @@ footer .footer-bottom {
         line-height: 1.5;
     }
 
+    /* YouTube section optimized for mobile */
+    .youtube-section {
+        padding: 40px 15px;
+    }
+
+    /* Video container full width minus padding on mobile */
+    .video-container {
+        width: 95%;
+        max-width: 100%;
+    }
+
     /* Countries section padding for mobile */
     .countries-section {
-        height: auto;
+        height: about;
         padding-left: 15px;
         padding-right: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     /* Countries heading for mobile */
@@ -575,7 +658,7 @@ footer .footer-bottom {
         max-width: 280px;
         height: 320px;
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 35px;
     }
 
     /* Footer adjusts for mobile */
@@ -639,117 +722,149 @@ footer .footer-bottom {
    ============================================ */
 
 @media (max-width: 479px) {
-    /* Header becomes ultra-compact on small phones */
+    /* Header becomes ultra-compact on small phones but maintains readability */
     .header {
-        padding: 8px 0;
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 8px;
     }
 
-    /* Brand name becomes very small on small phones */
+    /* Brand name stays readable on small phones */
     .name-h h1 {
-        font-size: 1.1rem;
-        margin-left: 8px;
+        font-size: 1.4rem;
+        margin-left: 10px;
+        margin-bottom: 0;
     }
 
-    /* Navigation bar reduced padding for small phones */
+    /* Navigation bar wraps items on small phones with better readability */
     .nav-bar {
-        padding: 5px 8px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
-    /* Navigation links become extra small */
-    .nav-bar a {
-        font-size: 0.75rem;
-        padding: 4px;
+    /* Navigation links and dropdown button maintain reasonable size */
+    .nav-bar a,
+    .nav-bar .drop-down {
+        font-size: 0.95rem;
+        margin-left: 0;
+        padding: 6px;
     }
 
-    /* Dropdown menu reduced for small phone screens */
+    /* Dropdown menu adjusted for small phones */
     .nav-bar ul {
-        font-size: 0.8rem;
-        width: 130px;
+        font-size: 0.9rem;
+        width: 140px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 55px;
     }
 
-    /* Cards stack vertically on small phones */
+    /* Cards stack vertically on small phones with good spacing */
     .container {
         flex-direction: column;
         align-items: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 
-    /* Cards become narrower on small phones */
+    /* Cards become full-width with good proportions on small phones */
     .item {
-        width: 95%;
-        max-width: 240px;
-        height: 280px;
+        width: 90%;
+        max-width: 260px;
+        height: 300px;
         margin-bottom: 35px;
-       
     }
 
-    /* Hero section minimal padding for small phones */
+    /* Hero section with comfortable padding for small phones */
     .top-section {
-        padding: 15px;
+        padding: 20px;
+        gap: 15px;
     }
 
-    /* Featured image becomes smaller on small phones */
+    /* Featured image scales appropriately on small phones */
     .top-section img {
-        height: 200px;
+        height: 220px;
     }
 
-    /* Heading becomes smaller on small phones */
+    /* Heading maintains good readability on small phones */
     .intro-text h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 12px;
     }
 
-    /* Paragraph text sized for small screen readability */
+    /* Paragraph text optimized for small screen readability */
     .intro-text p {
-        font-size: 0.95rem;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 
-    /* About section minimal padding for small phones */
+    /* About section with professional spacing for small phones */
     .about-section {
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 25px;
+        margin-bottom: 25px;
     }
 
-    /* About heading sized for small phones */
+    /* About heading maintains hierarchy on small phones */
     .about-section h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
     }
 
-    /* About text sized for small phone readability */
+    /* About text optimized for readability */
     .about-section p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
-    /* Countries section minimal padding for small phones */
+    /* YouTube section optimized for small phones */
+    .youtube-section {
+        padding: 30px 10px;
+    }
+
+    /* Video container responsive on small phones */
+    .video-container {
+        width: 98%;
+    }
+
+    /* Countries section with good spacing for small phones */
     .countries-section {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 25px;
     }
 
-    /* Countries heading sized for small phones */
+    /* Countries heading maintains visual hierarchy */
     .countries-section h2 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
     }
 
-    /* Card images even smaller on small phones */
-    .item {
-        max-width: 200px;
-        height: 250px;
-    }
-
-    /* Footer minimal padding for small phones */
+    /* Footer optimized for small phones */
     footer {
-        padding: 15px 10px;
+        padding: 20px 15px;
+        gap: 15px;
     }
 
-    /* Footer content stacks for small phones */
+    /* Footer content stacks professionally on small phones */
     footer .footer-content {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        width: 100%;
     }
 
-    /* Footer sections get minimal spacing on small phones */
+    /* Footer sections with consistent professional spacing */
     footer .footer-section {
-        padding: 12px 0;
+        padding: 15px 0;
+        text-align: center;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
@@ -758,30 +873,30 @@ footer .footer-bottom {
         border-bottom: none;
     }
 
-    /* Footer headings very small on small phones */
+    /* Footer headings with consistent sizing */
     footer .footer-section h3 {
-        font-size: 0.95rem;
-        margin-bottom: 8px;
+        font-size: 1rem;
+        margin-bottom: 10px;
         border-bottom: 2px solid black;
-        padding-bottom: 6px;
+        padding-bottom: 8px;
     }
 
-    /* Footer text sized for small phone readability */
+    /* Footer text with consistent readability */
     footer .footer-section p,
     footer .footer-section a {
-        font-size: 0.85rem;
-        line-height: 1.5;
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 
-    /* Footer links display as blocks on small phones */
+    /* Footer links display as blocks for better touch targets */
     footer .footer-section a {
         display: block;
-        margin: 3px 0;
+        margin: 5px 0;
     }
 
-    /* Copyright text extra small on small phones */
+    /* Copyright text with consistent styling */
     footer .footer-bottom {
-        font-size: 0.75rem;
-        padding-top: 10px;
+        font-size: 0.8rem;
+        padding-top: 15px;
     }
 }
