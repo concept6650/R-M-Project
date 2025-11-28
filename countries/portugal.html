@@ -2,58 +2,169 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portugal</title>
     <script src="../js/keep-params.js"></script>
     <link rel="stylesheet" href="../css/countries.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
   </head>
+
   <body>
-    <a href="../countries.html"><- back</a>
-    <hr />
-    <br />
-    <div id="inner">
-      <h1>Summary</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Top 5 Things to Do</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Getting around</h1>
-      <h2>Transport</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <h2>Safety</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
+    <!-- The Background image for the site -->
+    <div
+      style="
+        background-image: url(../img/portugal/background.webp);
+        background-color: #60818e;
+      "
+      class="background-div"
+    ></div>
+
+    <!-- The Header at the top of the site -->
+    <header>
+      <div class="name-h">
+        <h1>ROAM EU</h1>
+      </div>
+      <div class="nav-bar">
+        <a href="../index.html">Home</a>
+        <a href="../index.html">About</a>
+        <a
+          class="drop-down"
+          onclick="document.getElementById('country-list').classList.toggle('show')"
+          >Countries</a
+        >
+        <ul id="country-list" class="dropdown-menu">
+          <li><a href="../countries/france.html">France</a></li>
+          <li><a href="../countries/italy.html">Italy</a></li>
+          <li><a href="../countries/spain.html">Spain</a></li>
+          <li><a href="../countries/portugal.html">Portugal</a></li>
+          <li><a href="../countries/germany.html">Germany</a></li>
+        </ul>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </header>
+
+    <!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
+    <div class="grid-div">
+      <div></div>
+
+      <!-- Left content column containing the main part of the text -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <!-- The flag of the country as an SVG, taken from Wikipedia -->
+          <img
+            src="../SVGs/portugal_flag.svg"
+            class="flag"
+            alt="Flag of Portugal"
+          />
+          <!-- the National Anthem taken from Wikipedia -->
+          <audio
+            aria-label="(A Portuguesa - National Anthem of Portugal)"
+            controls
+          >
+            <source src="../audio/a_portuguesa.ogg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <!-- Here begins the primary text content -->
+          <h1>Summary</h1>
+          <p>
+            Portugal is a warm, welcoming country on Europe's Atlantic coast,
+            known for its golden beaches, historic cities, charming villages,
+            and rich maritime heritage. With vibrant culture, distinctive
+            cuisine, and stunning landscapes from the Algarve to the Douro
+            Valley, it offers something for every type of traveler.
+          </p>
+
+          <!-- To break up the text a bit, we include a map of the country -->
+          <img
+            src="../img/portugal/map.webp"
+            style="background-color: #cad5ca"
+            width="600px"
+            height="583px"
+            class="large-image"
+            alt="Map of Portugal"
+          />
+
+          <h1>Getting around</h1>
+          <h2>Transport</h2>
+          <p>
+            Portugal's transportation system is easy to navigate, with trains
+            connecting major cities like Lisbon, Porto, and Coimbra, and
+            regional lines reaching many smaller towns. In cities, trams,
+            metros, and buses are efficient, while renting a car is ideal for
+            exploring coastal areas and rural regions at your own pace.
+          </p>
+          <h2>Safety</h2>
+          <p>
+            Portugal is considered one of the safest countries in Europe, with
+            low violent crime and friendly, helpful locals. Petty theft can
+            occur in busy tourist zones, so keeping an eye on personal
+            belongings is sensible. Overall, travelers can feel comfortable
+            walking around cities and coastal towns day or night.
+          </p>
+        </article>
+      </div>
+
+      <!-- The right column of content containing the top 5 things to do -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <h1>Top 5 Things to Do</h1>
+          <ol>
+            <li>
+              <p class="list-text">Wander the colorful streets of Lisbon</p>
+              <img
+                src="../img/portugal/lisbon_streets.webp"
+                style="background-color: #e8f0e4"
+                class="list-image"
+                alt="Image of the streets of Lisbon"
+              />
+            </li>
+            <li>
+              <p class="list-text">Visit Belém's iconic monuments</p>
+              <img
+                src="../img/portugal/belems_monuments.webp"
+                style="background-color: #0272b5"
+                class="list-image"
+                alt="Image of Belém's monuments"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Explore Porto's riverside Ribeira district
+              </p>
+              <img
+                src="../img/portugal/ribeira_district.webp"
+                style="background-color: #6c6479"
+                class="list-image"
+                alt="Image of Porto's riverside Ribeira district"
+              />
+            </li>
+            <li>
+              <p class="list-text">Relax on the Algarve's dramatic coastline</p>
+              <img
+                src="../img/portugal/algarves_coastline.webp"
+                style="background-color: #87937d"
+                class="list-image"
+                alt="Image of Algarve's coastline"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Enjoy a river cruise through the terraced vineyards of the Douro
+                Valley
+              </p>
+              <img
+                src="../img/portugal/douro_valley.webp"
+                style="background-color: #a3b133"
+                class="list-image"
+                alt="Image of the Douro Valley"
+              />
+            </li>
+          </ol>
+        </article>
+      </div>
+
+      <div></div>
     </div>
   </body>
 </html>
