@@ -1,95 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>ROAMEU/Home</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="name-h">
-        <h1>ROAM EU</h1>
-      </div>
-      <nav class="nav-bar">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a class="drop-down">Countries</a>
-        <ul class="dropdown-menu">
-          <li><a href="./countries/france.html">FRANCE</a></li>
-            <li><a href="./countries/italy.html">ITALY</a></li>
-            <li><a href="./countries/spain.html">SPAIN</a></li>
-           <li><a href="./countries/portugal.html">PORTUGAL</a></li>
-            <li><a href="./countries/Germany.html"></a></li>
-        </ul>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-    <div class="top-section">
-      <div class="intro-text">
-        <h2>Welcome to ROAM EU</h2>
-        <p>Your gateway to exploring Europe</p>
-      </div>
-      <img src="img/top_section.webp" alt="Travel in Europe" />
-    </div>
-    <div class="about-section" id="about">
-      <h2>About Us</h2>
-      <p>
-        Welcome to Roam EU! We are dedicated to helping travelers explore the
-        rich culture, history, and beauty of Europe. Whether you are looking for
-        hidden gems or popular destinations, we have you covered. At Roam EU, we
-        understand the desire for authentic and memorable travel experiences.
-        Our team is passionate about crafting itineraries that highlight the
-        very best of the continent's most captivating countries. We are
-        specialists in few select Western European destinations, offering expert
-        knowledge and tailored journeys through France, Spain, Italy, Portugal,
-        and Germany. From the sun-drenched coasts of the Iberian Peninsula to
-        the historical landmarks of Central Europe, our goal is to help you
-        discover the landscapes, cuisines, and stories that make each of these
-        nations unique. Discover the effortless way to explore Europe with Roam
-        EU. Let us guide you on your next great adventure.
-      </p>
-    </div>
-    <div class="countries-section">
-      <h2>Choose Your Destination</h2>
-      <div class="carousel">
 
-  <a href="countries/france.html" class="carousel-item">
-    <img src="./SVGs/France 2.svg" alt="France" />
-    <h3>France</h3>
-  </a>
+<head>
+	<!-- Character encoding for proper text display across all browsers -->
+	<meta charset="UTF-8" />
+	<!-- Viewport settings to ensure responsive design works properly on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Link to our main stylesheet that controls the visual appearance of all elements -->
+	<link rel="stylesheet" href="./css/style.css" />
+	<!-- Page title that appears in the browser tab -->
+	<title>ROAMEU/Home</title>
+</head>
 
-  <a href="countries/italy.html" class="carousel-item">
-    <img src="./SVGs/italy 2.svg" alt="Italy" />
-    <h3>Italy</h3>
-  </a>
+<body>
+	<!-- Header section: Contains the site logo and main navigation menu -->
+	<header class="header">
+		<!-- Logo/Brand name for ROAM EU -->
+		<div class="name-h">
+			<h1>ROAM EU</h1>
+		</div>
+		<!-- Main navigation bar with links to different sections of the website -->
+		<nav class="nav-bar">
+			<!-- Home link -->
+			<a href="#">Home</a>
+			<!-- About section link -->
+			<a href="#about">About</a>
+			<!-- Dropdown menu trigger for country selection - Updated to be keyboard accessible -->
+			<button class="drop-down" aria-label="Toggle countries menu" aria-expanded="false">Countries</button>
+			<!-- Dropdown menu containing list of European countries -->
+			<ul class="dropdown-menu">
+				<li><a href="./countries/france.html">FRANCE</a></li>
+				<li><a href="./countries/italy.html">ITALY</a></li>
+				<li><a href="./countries/spain.html">SPAIN</a></li>
+				<li><a href="./countries/portugal.html">PORTUGAL</a></li>
+				<li><a href="./countries/Germany.html"></a></li>
+			</ul>
+			<!-- Contact page link -->
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
 
-  <a href="countries/spain.html" class="carousel-item main-item">
-    <img src="./SVGs/spainSvg.svg" alt="Spain" />
-    <h3>Spain</h3>
-  </a>
+	<!-- Main content area: Wraps all primary page content between header and footer -->
+	<main>
+		<!-- Hero/Welcome section: Features the main welcome message and a featured image -->
+		<section class="top-section">
+			<!-- Welcome text content on the left side -->
+			<div class="intro-text">
+				<h2>Welcome to ROAM EU</h2>
+				<p>Your gateway to exploring Europe</p>
+			</div>
+			<!-- Featured travel image on the right side -->
+			<img src="img/top_section.webp" alt="Travel in Europe" />
+		</section>
 
-  <a href="countries/portugal.html" class="carousel-item">
-    <img src="./SVGs/portugalSvg.svg" alt="Portugal" />
-    <h3>Portugal</h3>
-  </a>
+		<!-- About Us section: Provides information about ROAM EU and our services -->
+		<section class="about-section" id="about">
+			<h2>About Us</h2>
+			<p>
+				Welcome to Roam EU! We are dedicated to helping travelers explore the
+				rich culture, history, and beauty of Europe. Whether you are looking for
+				hidden gems or popular destinations, we have you covered. At Roam EU, we
+				understand the desire for authentic and memorable travel experiences.
+				Our team is passionate about crafting itineraries that highlight the
+				very best of the continent's most captivating countries. We are
+				specialists in few select Western European destinations, offering expert
+				knowledge and tailored journeys through France, Spain, Italy, Portugal,
+				and Germany. From the sun-drenched coasts of the Iberian Peninsula to
+				the historical landmarks of Central Europe, our goal is to help you
+				discover the landscapes, cuisines, and stories that make each of these
+				nations unique. Discover the effortless way to explore Europe with Roam
+				EU. Let us guide you on your next great adventure.
+			</p>
+		</section>
 
-  <a href="countries/Germany.html" class="carousel-item">
-    <img src="./SVGs/germanSvg.svg" alt="Germany" />
-    <h3>Germany</h3>
-  </a>
+		<!-- YouTube video section: Features a promotional video about Europe travel -->
+		<section class="youtube-section">
+			<div class="video-container">
+				<iframe class="video-player"
+					src="https://www.youtube.com/embed/0xhzwDXfLds?si=_lU4qqxFTGGebSEK&amp;controls=0"
+					title="Europe Travel Experience"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</section>
 
-</div>
-      </div>
-    </div>
-    <footer>
-      <p>&copy; 2025 ROAM EU. All rights reserved.</p>
-      <div class="links">
-        <a href="#privacy">Privacy Policy</a> |
-        <a href="#terms">Terms of Service</a> |
-        <a href="contact.html">Contact Us</a>
-      </div>
-    </footer>
-    <script src="./js/script.js"></script>
-  </body>
+		<!-- Destination showcase section: Displays all featured countries with images -->
+		<section class="countries-section">
+			<h2>Choose Your Destination</h2>
+			<!-- Container for country cards that displays them in a horizontal scrollable layout on desktop -->
+			<div class="container">
+				<!-- France destination card -->
+				<a href="./countries/france.html" class="item">
+					<img src="./img/premium_photo-1719430569503-338fc89eb21f.avif" alt="France" />
+					<h3>France</h3>
+				</a>
+				<!-- Italy destination card -->
+				<a href="./countries/italy.html" class="item">
+					<img src="./img/spencer-davis-ckotRXopwRM-unsplash.jpg" alt="Italy" />
+					<h3>Italy</h3>
+				</a>
+				<!-- Spain destination card -->
+				<a href="./countries/spain.html" class="item">
+					<img src="./img/robin-ulrich-Dnfl3fIjjtk-unsplash.jpg" alt="Spain" />
+					<h3>Spain</h3>
+				</a>
+				<!-- Portugal destination card -->
+				<a href="./countries/portugal.html" class="item">
+					<img src="./img/ekaterina-boltaga-jqkGK3ofxi8-unsplash.jpg" alt="Portugal" />
+					<h3>Portugal</h3>
+				</a>
+				<!-- Germany destination card -->
+				<a href="./countries/Germany.html" class="item">
+					<img src="./img/julia-solonina-5NnK3nJ44g8-unsplash.jpg" alt="Germany" />
+					<h3>Germany</h3>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer section: Contains company information, links, and copyright notice -->
+	<footer>
+		<!-- Main footer content divided into three sections -->
+		<div class="footer-content">
+			<!-- About section in footer: Brief company description -->
+			<div class="footer-section">
+				<h3>About ROAM EU</h3>
+				<p>Explore the rich culture, history, and beauty of Europe with us.</p>
+			</div>
+			<!-- Quick links section in footer: Important navigation links -->
+			<div class="footer-section">
+				<h3>Quick Links</h3>
+				<nav>
+					<a href="#about">About</a>
+					<a href="contact.html">Contact Us</a>
+				</nav>
+			</div>
+			<!-- Legal section in footer: Privacy and terms links -->
+			<div class="footer-section">
+				<h3>Legal</h3>
+				<nav>
+					<a href="./contact.html">Privacy Policy</a>
+					<a href="./contact.html">Terms of Service</a>
+				</nav>
+			</div>
+		</div>
+		<!-- Copyright notice at the bottom of the footer -->
+		<div class="footer-bottom">
+			<p>&copy; 2025 ROAM EU. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<!-- JavaScript file for interactive features like dropdown menu functionality -->
+	<script src="./js/script.js"></script>
+</body>
+
 </html>
