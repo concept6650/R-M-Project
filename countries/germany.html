@@ -2,58 +2,172 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Greece</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Germany</title>
     <script src="../js/keep-params.js"></script>
     <link rel="stylesheet" href="../css/countries.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
   </head>
+
   <body>
-    <a href="../countries.html"><- back</a>
-    <hr />
-    <br />
-    <div id="inner">
-      <h1>Summary</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Top 5 Things to Do</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <br />
-      <h1>Getting around</h1>
-      <h2>Transport</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
-      <h2>Safety</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
-      </p>
+    <!-- The Background image for the site -->
+    <div
+      style="
+        background-image: url(../img/germany/background.webp);
+        background-color: #60818e;
+      "
+      class="background-div"
+    ></div>
+
+    <!-- The Header at the top of the site -->
+    <header>
+      <div class="name-h">
+        <h1>ROAM EU</h1>
+      </div>
+      <div class="nav-bar">
+        <a href="../index.html">Home</a>
+        <a href="../index.html">About</a>
+        <a
+          class="drop-down"
+          onclick="document.getElementById('country-list').classList.toggle('show')"
+          >Countries</a
+        >
+        <ul id="country-list" class="dropdown-menu">
+          <li><a href="../countries/france.html">France</a></li>
+          <li><a href="../countries/italy.html">Italy</a></li>
+          <li><a href="../countries/spain.html">Spain</a></li>
+          <li><a href="../countries/portugal.html">Portugal</a></li>
+          <li><a href="../countries/germany.html">Germany</a></li>
+        </ul>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </header>
+
+    <!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
+    <div class="grid-div">
+      <div></div>
+
+      <!-- Left content column containing the main part of the text -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <!-- The flag of the country as an SVG, taken from Wikipedia -->
+          <img
+            src="../SVGs/germany_flag.svg"
+            class="flag"
+            alt="Flag of Germany"
+          />
+          <!-- the National Anthem taken from Wikipedia -->
+          <audio
+            aria-label="(Deutschlandlied - National Anthem of Germany)"
+            controls
+          >
+            <source src="../audio/deutschlandlied.ogg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <!-- Here begins the primary text content -->
+          <h1>Summary</h1>
+          <p>
+            Germany is a diverse and modern country at the heart of Europe,
+            known for its rich history, cutting-edge industries, fairytale
+            landscapes, and vibrant cultural traditions. From medieval towns and
+            world-class museums to innovative cities like Berlin and Munich, it
+            offers a blend of old-world charm and contemporary energy.
+          </p>
+
+          <!-- To break up the text a bit, we include a map of the country -->
+          <img
+            src="../img/germany/map.webp"
+            style="background-color: #cad5ca"
+            width="600px"
+            height="583px"
+            class="large-image"
+            alt="Map of Germany"
+          />
+
+          <h1>Getting around</h1>
+          <h2>Transport</h2>
+          <p>
+            Germany boasts one of Europe's most efficient transportation
+            systems, including high-speed ICE trains that connect major cities,
+            extensive regional rail networks, and clean, reliable public transit
+            in urban areas. Renting a car is popular for exploring rural regions
+            and the Autobahn, while domestic flights cover longer distances
+            quickly.
+          </p>
+          <h2>Safety</h2>
+          <p>
+            Germany is generally very safe for travelers, with low crime rates
+            and well-maintained public spaces. As in any major country, it's
+            wise to stay alert in crowded areas, keep belongings secure on
+            public transport, and follow local guidance. Emergency services are
+            responsive, and most destinations are safe to explore both day and
+            night.
+          </p>
+        </article>
+      </div>
+
+      <!-- The right column of content containing the top 5 things to do -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <h1>Top 5 Things to Do</h1>
+          <ol>
+            <li>
+              <p class="list-text">See the Brandenburg Gate</p>
+              <img
+                src="../img/germany/brandenburg_gate.webp"
+                style="background-color: #e8f0e4"
+                class="list-image"
+                alt="Image of the Brandenburg Gate"
+              />
+            </li>
+            <li>
+              <p class="list-text">See the Berlin Wall</p>
+              <img
+                src="../img/germany/berlin_wall.webp"
+                style="background-color: #0272b5"
+                class="list-image"
+                alt="Image of the Berlin Wall"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Visit the Neuschwanstein Castle in Bavaria
+              </p>
+              <img
+                src="../img/germany/neuschwanstein_castle.webp"
+                style="background-color: #6c6479"
+                class="list-image"
+                alt="Image of the Neuschwanstein Castle in Bavaria"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Enjoy the scenic Rhine River with its castles and vineyards
+              </p>
+              <img
+                src="../img/germany/rhine_river.webp"
+                style="background-color: #87937d"
+                class="list-image"
+                alt="Image of the Rhine River"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Experience Munich's beer gardens and Oktoberfest
+              </p>
+              <img
+                src="../img/germany/munichs_beer_gardens.webp"
+                style="background-color: #a3b133"
+                class="list-image"
+                alt="Image of Munich's beer gardens"
+              />
+            </li>
+          </ol>
+        </article>
+      </div>
+
+      <div></div>
     </div>
   </body>
 </html>
