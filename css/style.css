@@ -1,3 +1,8 @@
+/* ============================================
+   CUSTOM FONTS & GLOBAL STYLES
+   ============================================ */
+
+/* Import Open Sans font from local file with support for all weights (100-900) */
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
@@ -5,19 +10,26 @@
     font-style: normal
 }
 
+/* Reset all default margins and padding to ensure consistent spacing across browsers */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
+/* Set base styles for body and html elements */
 body, html {
     height: 100%;
     width: 100%;
     font-family: 'Open Sans';
     background-color: rgb(255, 255, 255);
 }
+/* ============================================
+   HEADER & NAVIGATION STYLES
+   ============================================ */
 
+/* Sticky header that stays at the top while scrolling. Uses glassmorphic effect with blur background */
 .header{
     position: sticky;
     top: 0;
@@ -30,13 +42,18 @@ body, html {
     align-items: center;
     transition: background-color 0.6s ease;
 }
+
+/* Enhance header background on hover for better visual feedback */
 .header:hover{
 background-color: rgba(195, 195, 186, 0.4);
 }
+/* Navigation bar container with right padding for proper spacing */
 .nav-bar{
     padding-right: 30px;
     font-family: 'Open Sans', cursive;
 }
+
+/* Navigation links styling with hover effects for better interactivity */
 .nav-bar a{
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -45,9 +62,13 @@ background-color: rgba(195, 195, 186, 0.4);
     font-family: 'Open Sans';
     transition: color 0.3s ease;
 }
+
+/* Change link color on hover for visual feedback */
 .nav-bar a:hover{
     color: rgb(100, 100, 100);
 }
+
+/* Dropdown menu styling: positioned absolutely and hidden by default */
 .nav-bar ul{
     min-width: 150px;
     list-style: none;
@@ -61,26 +82,40 @@ background-color: rgba(195, 195, 186, 0.4);
     right: 6%;
     transition: opacity 0.5s ease;
 }
+
+/* Dropdown list items with border separator */
 .nav-bar ul li{
     padding: 10px 0;
     border-bottom: 1px solid black;
     cursor: pointer;
 }
+
+/* Hover effect for dropdown items */
 .nav-bar ul li:hover{
     color: rgb(100, 100, 100);
 }
+
+/* Cursor pointer for dropdown trigger */
 .drop-down{
     cursor: pointer;
      
 }
+
+/* Dropdown menu hidden by default with opacity */
 .dropdown-menu{
     opacity: 0;
 }
+
+/* Show dropdown menu when active */
 .show{
     opacity: 1;
 }
 
+/* ============================================
+   SITE BRAND/LOGO STYLES
+   ============================================ */
 
+/* Brand name heading in the header */
 .name-h h1{
     font-family: 'Open Sans';
     font-size: 2.5rem;
@@ -88,12 +123,20 @@ background-color: rgba(195, 195, 186, 0.4);
     margin-left: 20px;
     color: rgb(0, 0, 0);
 }
+
+/* ============================================
+   HERO SECTION (TOP SECTION)
+   ============================================ */
+
+/* Hero section: displays welcome text and featured image side by side */
 .top-section{
     height:900px;
     width:100%;
     display: flex;
     justify-content: space-between;
 }
+
+/* Featured image in hero section with rounded corners */
 .top-section img{
     width: 70%;
     height: 800px;
@@ -101,6 +144,8 @@ background-color: rgba(195, 195, 186, 0.4);
     margin-top: 30px;
     margin-left: 50px;
 }
+
+/* Welcome text container positioned on the left side */
 .intro-text{
     width: 30%;
     height: 100%;
@@ -108,22 +153,34 @@ background-color: rgba(195, 195, 186, 0.4);
     padding-left: 3%;
     align-items: center;
 }
+
+/* Main welcome heading with bottom border */
 .intro-text h2{
     font-size: 3rem;
     margin-bottom: 20px;
     border-bottom: 2px solid black;
 }
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+/* About section with fixed height and left padding for content */
 .about-section{
     height: 500px;
     width: 100%;
     padding-left: 3%;
     padding-top: 6%;
 }
+
+/* About section heading with bottom border */
 .about-section h2{
     font-size: 2.5rem;
     margin-bottom: 20px;
     border-bottom: 2px solid black;
 }
+
+/* About section paragraph text with proper line height for readability */
 .about-section p{
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -132,16 +189,26 @@ background-color: rgba(195, 195, 186, 0.4);
     width: 90%;
     font-weight: lighter;
 }
+
+/* ============================================
+   COUNTRIES SECTION & DESTINATION CARDS
+   ============================================ */
+
+/* Countries showcase section container */
 .countries-section{
     height: 1000px;
     width: 100%;
     padding-left: 3%;
 }
+
+/* Heading for countries section centered on the page */
 .countries-section h2{
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
 }
+
+/* Horizontal scrollable container for destination cards */
 .container{
     width: 100%;
     height: 500px;
@@ -152,6 +219,8 @@ background-color: rgba(195, 195, 186, 0.4);
     scrollbar-width: none;
     scroll-behavior: smooth;
 }
+
+/* Individual destination card with shadow and rounded corners */
 .item{
     width: 380px;
     height: 450px;
@@ -160,12 +229,24 @@ background-color: rgba(195, 195, 186, 0.4);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+/* Images inside destination cards fill the card with proper aspect ratio */
 .item img{
     width: 100%;
     height: 100%;
     border-radius: 10px 10px 10px 10px;
     object-fit: cover;
 }
+.item:hover img{
+    transform: scale(1.03);
+    transition: transform 0.8s ease;
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+
+/* Footer container with glassmorphic effect similar to header */
 footer{
     height: auto;
     width: 100%;
@@ -181,6 +262,7 @@ footer{
     gap: 20px;
 }
 
+/* Main footer content wrapper: holds the three footer sections */
 footer .footer-content {
     display: flex;
     justify-content: space-around;
@@ -190,11 +272,13 @@ footer .footer-content {
     gap: 40px;
 }
 
+/* Individual footer section (About, Links, Legal) */
 footer .footer-section {
     flex: 1;
     text-align: center;
 }
 
+/* Footer section headings with bottom border for visual separation */
 footer .footer-section h3 {
     font-family: 'Open Sans';
     font-size: 1.2rem;
@@ -205,6 +289,7 @@ footer .footer-section h3 {
     padding-bottom: 10px;
 }
 
+/* Footer section text and links styling */
 footer .footer-section p,
 footer .footer-section a {
     font-size: 1rem;
@@ -214,10 +299,12 @@ footer .footer-section a {
     transition: color 0.3s ease;
 }
 
+/* Hover effect for footer links */
 footer .footer-section a:hover {
     color: rgb(100, 100, 100);
 }
 
+/* Footer bottom section with copyright information */
 footer .footer-bottom {
     text-align: center;
     width: 100%;
@@ -227,33 +314,45 @@ footer .footer-bottom {
     color: rgb(50, 50, 50);
 }
 
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET (iPad)
+   768px to 1024px width
+   ============================================ */
+
 /* Tablet (iPad) - 768px to 1024px */
 @media (max-width: 1024px) {
+    /* Header adjusts to smaller size on tablets */
     .header {
         height: 100px;
         flex-wrap: wrap;
     }
 
+    /* Reduce brand name size for tablet screens */
     .name-h h1 {
         font-size: 2rem;
         margin-left: 15px;
     }
 
+    /* Adjust navigation bar padding for tablets */
     .nav-bar {
         padding-right: 15px;
     }
 
+    /* Reduce navigation link font size */
     .nav-bar a {
         margin-left: 15px;
         font-size: 1.2rem;
     }
 
+    /* Hero section changes to vertical layout on tablets */
     .top-section {
         height: 600px;
         flex-direction: column;
         align-items: center;
     }
 
+    /* Featured image takes up more width on tablets */
     .top-section img {
         width: 90%;
         height: 400px;
@@ -261,6 +360,7 @@ footer .footer-bottom {
         margin-top: 20px;
     }
 
+    /* Welcome text section spans full width on tablets */
     .intro-text {
         width: 100%;
         padding-top: 15%;
@@ -268,10 +368,12 @@ footer .footer-bottom {
         padding-right: 5%;
     }
 
+    /* Adjust welcome heading size for tablets */
     .intro-text h2 {
         font-size: 2rem;
     }
 
+    /* About section becomes flexible height on tablets */
     .about-section {
         height: auto;
         padding-left: 5%;
@@ -279,41 +381,49 @@ footer .footer-bottom {
         padding-top: 5%;
     }
 
+    /* Reduce about heading font size for tablets */
     .about-section h2 {
         font-size: 2rem;
     }
 
+    /* Adjust about text to full width */
     .about-section p {
         font-size: 1rem;
         width: 100%;
     }
 
+    /* Countries section padding adjustment for tablets */
     .countries-section {
         height: auto;
         padding-left: 5%;
         padding-right: 5%;
     }
 
+    /* Reduce countries heading size */
     .countries-section h2 {
         font-size: 2rem;
     }
 
+    /* Container becomes flexible height for tablets */
     .container {
         height: auto;
         margin-top: 100px;
         margin-bottom: 100px;
     }
 
+    /* Reduce card size for tablet screens */
     .item {
         width: 280px;
         height: 350px;
     }
 
+    /* Footer content wraps on tablets for better layout */
     footer .footer-content {
         flex-wrap: wrap;
         gap: 30px;
     }
 
+    /* Footer sections adjust width and spacing on tablets */
     footer .footer-section {
         flex: 1 1 45%;
         min-width: 200px;
@@ -321,7 +431,13 @@ footer .footer-bottom {
 }
 
 
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   480px to 767px width
+   ============================================ */
+
 @media (max-width: 767px) {
+    /* Header becomes compact with horizontal layout for phones */
     .header {
         height: auto;
         padding: 10px 0;
@@ -331,12 +447,14 @@ footer .footer-bottom {
         align-items: center;
     }
 
+    /* Brand name reduces for mobile devices */
     .name-h h1 {
         font-size: 1.3rem;
         margin-left: 10px;
         margin-bottom: 0;
     }
 
+    /* Navigation bar stays horizontal but compact on mobile */
     .nav-bar {
         width: auto;
         padding: 5px 10px;
@@ -349,12 +467,14 @@ footer .footer-bottom {
         justify-content: flex-end;
     }
 
+    /* Navigation links become smaller on mobile */
     .nav-bar a {
         margin-left: 0;
         font-size: 0.85rem;
         padding: 5px;
     }
 
+    /* Dropdown menu positioned absolutely for mobile */
     .nav-bar ul {
         position: absolute;
         right: 10px;
@@ -364,16 +484,19 @@ footer .footer-bottom {
         font-size: 0.85rem;
     }
 
+    /* Dropdown items spacing for mobile */
     .nav-bar ul li {
         padding: 6px 0;
     }
 
+    /* Hero section stacks vertically on mobile */
     .top-section {
         height: auto;
         flex-direction: column;
         padding: 20px;
     }
 
+    /* Featured image scales to full width on mobile */
     .top-section img {
         width: 100%;
         height: 250px;
@@ -381,6 +504,7 @@ footer .footer-bottom {
         margin-top: 15px;
     }
 
+    /* Welcome text takes full width on mobile */
     .intro-text {
         width: 100%;
         height: auto;
@@ -389,15 +513,18 @@ footer .footer-bottom {
         padding-right: 0;
     }
 
+    /* Reduce heading size for mobile */
     .intro-text h2 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
+    /* Adjust paragraph font size for mobile readability */
     .intro-text p {
         font-size: 1rem;
     }
 
+    /* About section becomes flexible on mobile */
     .about-section {
         height: auto;
         padding-left: 15px;
@@ -406,16 +533,19 @@ footer .footer-bottom {
         margin-bottom: 30px;
     }
 
+    /* About heading size for mobile */
     .about-section h2 {
         font-size: 1.5rem;
     }
 
+    /* About text optimized for mobile reading */
     .about-section p {
         font-size: 0.95rem;
         width: 100%;
         line-height: 1.5;
     }
 
+    /* Countries section padding for mobile */
     .countries-section {
         height: auto;
         padding-left: 15px;
@@ -423,11 +553,13 @@ footer .footer-bottom {
         margin-bottom: 30px;
     }
 
+    /* Countries heading for mobile */
     .countries-section h2 {
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
 
+    /* Cards stack vertically on mobile instead of horizontal scroll */
     .container {
         height: auto;
         margin-top: 50px;
@@ -437,6 +569,7 @@ footer .footer-bottom {
         overflow-x: visible;
     }
 
+    /* Cards become full width with proper spacing on mobile */
     .item {
         width: 90%;
         max-width: 280px;
@@ -445,17 +578,20 @@ footer .footer-bottom {
         margin-bottom: 20px;
     }
 
+    /* Footer adjusts for mobile */
     footer {
         padding: 20px 15px;
         gap: 15px;
     }
 
+    /* Footer content stacks vertically on mobile */
     footer .footer-content {
         flex-direction: column;
         width: 100%;
         gap: 15px;
     }
 
+    /* Footer sections get mobile-friendly spacing */
     footer .footer-section {
         flex: 1;
         text-align: center;
@@ -463,10 +599,12 @@ footer .footer-bottom {
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    /* Remove bottom border from last footer section */
     footer .footer-section:last-child {
         border-bottom: none;
     }
 
+    /* Footer headings sized for mobile */
     footer .footer-section h3 {
         font-size: 1rem;
         margin-bottom: 10px;
@@ -474,52 +612,68 @@ footer .footer-bottom {
         padding-bottom: 8px;
     }
 
+    /* Footer text sized for mobile readability */
     footer .footer-section p,
     footer .footer-section a {
         font-size: 0.9rem;
         line-height: 1.6;
     }
 
+    /* Footer links display as blocks for better touch targets on mobile */
     footer .footer-section a {
         display: block;
         margin: 5px 0;
     }
 
+    /* Footer bottom padding for mobile */
     footer .footer-bottom {
         font-size: 0.8rem;
         padding-top: 15px;
     }
 }
 
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE
+   320px to 479px width
+   ============================================ */
+
 @media (max-width: 479px) {
+    /* Header becomes ultra-compact on small phones */
     .header {
         padding: 8px 0;
     }
 
+    /* Brand name becomes very small on small phones */
     .name-h h1 {
         font-size: 1.1rem;
         margin-left: 8px;
     }
 
+    /* Navigation bar reduced padding for small phones */
     .nav-bar {
         padding: 5px 8px;
     }
 
+    /* Navigation links become extra small */
     .nav-bar a {
         font-size: 0.75rem;
         padding: 4px;
     }
 
+    /* Dropdown menu reduced for small phone screens */
     .nav-bar ul {
         font-size: 0.8rem;
         width: 130px;
     }
 
+    /* Cards stack vertically on small phones */
     .container {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Cards become narrower on small phones */
     .item {
         width: 95%;
         max-width: 240px;
@@ -528,68 +682,83 @@ footer .footer-bottom {
        
     }
 
+    /* Hero section minimal padding for small phones */
     .top-section {
         padding: 15px;
     }
 
+    /* Featured image becomes smaller on small phones */
     .top-section img {
         height: 200px;
     }
 
+    /* Heading becomes smaller on small phones */
     .intro-text h2 {
         font-size: 1.3rem;
     }
 
+    /* Paragraph text sized for small screen readability */
     .intro-text p {
         font-size: 0.95rem;
     }
 
+    /* About section minimal padding for small phones */
     .about-section {
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 20px;
     }
 
+    /* About heading sized for small phones */
     .about-section h2 {
         font-size: 1.3rem;
     }
 
+    /* About text sized for small phone readability */
     .about-section p {
         font-size: 0.9rem;
     }
 
+    /* Countries section minimal padding for small phones */
     .countries-section {
         padding-left: 10px;
         padding-right: 10px;
     }
 
+    /* Countries heading sized for small phones */
     .countries-section h2 {
         font-size: 1.3rem;
     }
 
+    /* Card images even smaller on small phones */
     .item {
         max-width: 200px;
         height: 250px;
     }
 
+    /* Footer minimal padding for small phones */
     footer {
         padding: 15px 10px;
     }
 
+    /* Footer content stacks for small phones */
     footer .footer-content {
         flex-direction: column;
         gap: 10px;
     }
 
+    /* Footer sections get minimal spacing on small phones */
     footer .footer-section {
         padding: 12px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    /* Remove border from last footer section on small phones */
     footer .footer-section:last-child {
         border-bottom: none;
     }
 
+    /* Footer headings very small on small phones */
     footer .footer-section h3 {
         font-size: 0.95rem;
         margin-bottom: 8px;
@@ -597,17 +766,20 @@ footer .footer-bottom {
         padding-bottom: 6px;
     }
 
+    /* Footer text sized for small phone readability */
     footer .footer-section p,
     footer .footer-section a {
         font-size: 0.85rem;
         line-height: 1.5;
     }
 
+    /* Footer links display as blocks on small phones */
     footer .footer-section a {
         display: block;
         margin: 3px 0;
     }
 
+    /* Copyright text extra small on small phones */
     footer .footer-bottom {
         font-size: 0.75rem;
         padding-top: 10px;
