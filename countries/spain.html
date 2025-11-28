@@ -1,126 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spain</title>
+    <link rel="stylesheet" href="../css/countries.css" />
+    <link rel="stylesheet" href="../css/shared.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Spain</title>
-	<script src="../js/keep-params.js"></script>
-	<link rel="stylesheet" href="../css/countries.css" />
-	<link rel="stylesheet" href="../css/shared.css" />
-</head>
+  <body>
+    <!-- The Background image for the site -->
+    <div
+      style="
+        background-image: url(../img/spain/background.webp);
+        background-color: #60818e;
+      "
+      class="background-div"
+    ></div>
 
-<body>
-	<!-- The Background image for the site -->
-	<div style="background-image: url(../img/spain/background.webp); background-color: #60818e;" class="background-div">
-	</div>
+    <!-- The Header at the top of the site -->
+    <header>
+      <div class="name-h">
+        <h1>ROAM EU</h1>
+      </div>
+      <div class="nav-bar">
+        <a href="../index.html">Home</a>
+        <a href="../index.html">About</a>
+        <a
+          class="drop-down"
+          onclick="document.getElementById('country-list').classList.toggle('show')"
+          >Countries</a
+        >
+        <ul id="country-list" class="dropdown-menu">
+          <li><a href="../countries/france.html">France</a></li>
+          <li><a href="../countries/italy.html">Italy</a></li>
+          <li><a href="../countries/spain.html">Spain</a></li>
+          <li><a href="../countries/portugal.html">Portugal</a></li>
+          <li><a href="../countries/germany.html">Germany</a></li>
+        </ul>
+        <a href="../contact.html">Contact</a>
+      </div>
+    </header>
 
-	<!-- The Header at the top of the site -->
-	<header>
-		<div class="name-h">
-			<h1>ROAM EU</h1>
-		</div>
-		<div class="nav-bar">
-			<a href="../index.html">Home</a>
-			<a href="../index.html">About</a>
-			<a class="drop-down"
-				onclick="document.getElementById('country-list').classList.toggle('show')">Countries</a>
-			<ul id="country-list" class="dropdown-menu">
-				<li><a href="../countries/france.html">France</a></li>
-				<li><a href="../countries/italy.html">Italy</a></li>
-				<li><a href="../countries/spain.html">Spain</a></li>
-				<li><a href="../countries/portugal.html">Portugal</a></li>
-				<li><a href="../countries/germany.html">Germany</a></li>
-			</ul>
-			<a href="../contact.html">Contact</a>
-		</div>
-	</header>
+    <!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
+    <div class="grid-div">
+      <div></div>
 
-	<!-- The main grid layout split into 4 columns, with content on the middle two columns. -->
-	<div class="grid-div">
-		<div></div>
+      <!-- Left content column containing the main part of the text -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <!-- The flag of the country as an SVG, taken from Wikipedia -->
+          <img src="../SVGs/flags/spain.svg" class="flag" alt="Flag of Spain" />
+          <!-- the National Anthem taken from Wikipedia -->
+          <audio aria-label="Marcha Real - National Anthem of Spain" controls>
+            <source src="../audio/marcha_real.ogg" />
+            Your browser does not support the audio element.
+          </audio>
 
-		<!-- Left content column containing the main part of the text -->
-		<div class="main-div-outer">
-			<article class="main-div-inner">
-				<!-- The flag of the country as an SVG, taken from Wikipedia -->
-				<img src="../SVGs/Bandera_de_España.svg" class="flag" alt="Flag of Spain">
-				<!-- the National Anthem taken from Wikipedia -->
-				<audio aria-label="Marcha Real, the National Anthem of spain" controls>
-					<source src="../audio/Himno_Nacional_de_España.ogg"> Your browser does not support the audio
-					element.
-				</audio>
+          <!-- Here begins the primary text content -->
+          <h1>Summary</h1>
+          <p>
+            Spain is a vibrant and culturally rich country known for its lively
+            cities, diverse landscapes, and deep artistic heritage. From the
+            architectural wonders of Barcelona to the royal majesty of Madrid,
+            the beaches of the Costa del Sol, and the historic charm of
+            Andalusia, Spain offers a blend of excitement, relaxation, and
+            history. The capital is Madrid, and the primary language is Spanish,
+            though English is commonly spoken in major tourist destinations. The
+            best time to visit is spring and autumn for comfortable weather and
+            fewer crowds.
+          </p>
+          <!-- To break up the text a bit, we include a map of the country -->
+          <img
+            src="../img/spain/map.webp"
+            style="background-color: #cad5ca"
+            width="600px"
+            height="583px"
+            class="large-image"
+            alt="Map of Spain"
+          />
+          <h1>Getting around</h1>
+          <h2>Transport</h2>
+          <p>
+            Spain’s transportation system is modern and convenient. High-speed
+            AVE trains link major cities like Madrid, Barcelona, Seville, and
+            Valencia, offering fast and comfortable travel. Regional trains and
+            buses reach smaller towns, while metro systems in Madrid, Barcelona,
+            and other cities make urban travel easy. Renting a car can be
+            helpful for exploring rural regions such as Andalusia, Galicia, or
+            the Basque Country. Domestic flights are available for long
+            distances, particularly to the Balearic and Canary Islands.
+          </p>
+          <h2>Safety</h2>
+          <p>
+            Spain is generally safe, with most visits trouble-free. The main
+            concern for travelers is pickpocketing, especially in crowded areas,
+            major attractions, and public transport—Barcelona is particularly
+            known for this. Keep belongings close and secure. At night, most
+            central districts are safe to walk, though it’s wise to avoid poorly
+            lit or isolated areas. Follow local guidelines during festivals,
+            which can draw large crowds.
+          </p>
+        </article>
+      </div>
 
-				<!-- Here begins the primary text content -->
-				<h1>Summary</h1>
-				<p>
-					Spain is a vibrant and culturally rich country known for its lively cities, diverse landscapes, and
-					deep artistic heritage. From the architectural wonders of Barcelona to the royal majesty of Madrid,
-					the beaches of the Costa del Sol, and the historic charm of Andalusia, Spain offers a blend of
-					excitement, relaxation, and history. The capital is Madrid, and the primary language is Spanish,
-					though English is commonly spoken in major tourist destinations. The best time to visit is spring
-					and autumn for comfortable weather and fewer crowds.
-				</p>
-				<!-- To break up the text a bit, we include a map of the country -->
-				<img src="../img/spain/map.webp" style="background-color: #cad5ca;" width="600px" height="583px"
-					class="large-image" alt="Map of Spain">
-				<h1>Getting around</h1>
-				<h2>Transport</h2>
-				<p>
-					Spain’s transportation system is modern and convenient. High-speed AVE trains link major cities like
-					Madrid, Barcelona, Seville, and Valencia, offering fast and comfortable travel. Regional trains and
-					buses reach smaller towns, while metro systems in Madrid, Barcelona, and other cities make urban
-					travel easy. Renting a car can be helpful for exploring rural regions such as Andalusia, Galicia, or
-					the Basque Country. Domestic flights are available for long distances, particularly to the Balearic
-					and Canary Islands.
-				</p>
-				<h2>Safety</h2>
-				<p>
-					Spain is generally safe, with most visits trouble-free. The main concern for travelers is
-					pickpocketing, especially in crowded areas, major attractions, and public transport—Barcelona is
-					particularly known for this. Keep belongings close and secure. At night, most central districts are
-					safe to walk, though it’s wise to avoid poorly lit or isolated areas. Follow local guidelines during
-					festivals, which can draw large crowds.
-				</p>
-			</article>
-		</div>
+      <!-- The right column of content containing the top 5 things to do -->
+      <div class="main-div-outer">
+        <article class="main-div-inner">
+          <h1>Top 5 Things to Do</h1>
+          <ol>
+            <li>
+              <p class="list-text">Explore Barcelona's Architecture</p>
+              <img
+                src="../img/spain/barcelona.webp"
+                style="background-color: #e8f0e4"
+                class="list-image"
+                alt="Image of Barcelona"
+              />
+            </li>
+            <li>
+              <p class="list-text">
+                Visit Madrid's Royal and Cultural Landmarks
+              </p>
+              <img
+                src="../img/spain/retiro_park.webp"
+                style="background-color: #0272b5"
+                class="list-image"
+                alt="Image of Retiro Park"
+              />
+            </li>
+            <li>
+              <p class="list-text">Experience Andalusia</p>
+              <img
+                src="../img/spain/andalusia.webp"
+                style="background-color: #6c6479"
+                class="list-image"
+                alt="Image of Provence"
+              />
+            </li>
+            <li>
+              <p class="list-text">Relax on the Spanish Coasts</p>
+              <img
+                src="../img/spain/coasts.webp"
+                style="background-color: #87937d"
+                class="list-image"
+                alt="Image of a Châteaux of the Loire Valley"
+              />
+            </li>
+            <li>
+              <p class="list-text">Hike Spain's Scenic landscapes</p>
+              <img
+                src="../img/spain/pyrenees.webp"
+                style="background-color: #a3b133"
+                class="list-image"
+                alt="Image of the Pyrenees"
+              />
+            </li>
+          </ol>
+        </article>
+      </div>
 
-		<!-- The right column of content containing the top 5 things to do -->
-		<div class="main-div-outer">
-			<article class="main-div-inner">
-				<h1>Top 5 Things to Do</h1>
-				<ol>
-					<li>
-						<p class="list-text">Explore Barcelona's Architecture</p>
-						<img src="../img/spain/barcelona.webp" style="background-color: #e8f0e4;" class="list-image"
-							alt="Image of Barcelona">
-					</li>
-					<li>
-						<p class="list-text">Visit Madrid's Royal and Cultural Landmarks</p>
-						<img src="../img/spain/retiro_park.webp" style="background-color: #0272b5;" class="list-image"
-							alt="Image of Retiro Park">
-					</li>
-					<li>
-						<p class="list-text">Experience Andalusia</p>
-						<img src="../img/spain/andalusia.webp" style="background-color: #6c6479;" class="list-image"
-							alt="Image of Provence">
-					</li>
-					<li>
-						<p class="list-text">Relax on the Spanish Coasts</p>
-						<img src="../img/spain/coasts.webp" style="background-color: #87937d;" class="list-image"
-							alt="Image of a Châteaux of the Loire Valley">
-					</li>
-					<li>
-						<p class="list-text">Hike Spain's Scenic landscapes</p>
-						<img src="../img/spain/pyrenees.webp" style="background-color: #a3b133;" class="list-image"
-							alt="Image of the Pyrenees">
-					</li>
-				</ol>
-			</article>
-		</div>
-
-		<div></div>
-	</div>
-</body>
-
+      <div></div>
+    </div>
+  </body>
 </html>
