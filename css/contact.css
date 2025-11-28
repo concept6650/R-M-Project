@@ -1,11 +1,11 @@
-body {
+body {/* setting the font and background color*/
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #f5f5f5;
 }
 
-.container {
+.container {  /* main box color and sizing*/
     width: 80%;
     max-width: 900px;
     margin: 50px auto;
@@ -16,11 +16,11 @@ body {
 }
 
 h1 {
-    text-align: center;
+    text-align: center; /* centering text*/
     margin-bottom: 20px;
 }
 
-.contact-info {
+.contact-info {/* centering text*/
     text-align: center;
     margin-bottom: 30px;
 }
@@ -39,7 +39,7 @@ textarea {
     font-size: 16px;
 }
 
-button {
+button {/* botton color and size*/
     padding: 12px;
     margin-top: 10px;
     border: none;
